@@ -1,0 +1,41 @@
+Task 1 - Login
+POST /auth/login
+
+Output:
+{
+    "message": "OTP sent",
+    "loginSessionId": "avjo8b"
+}
+
+Task 2 - Verify OTP
+POST /auth/verify-otp
+
+Output: 
+{
+    "message": "OTP verified",
+    "sessionId": "avjo8b"
+}
+
+Task 3 - Get Token
+POST /auth/token
+
+Output:
+{
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtyaXRpa2FnYXJnMzUxQGdtYWlsLmNvbSIsInNlc3Npb25JZCI6ImF2am84YiIsImlhdCI6MTc3MzIyMTg3MCwiZXhwIjoxNzczMjIyNzcwfQ.nsc4apCLDX7_A6IBDQSfRK0y4F2i7eHoFC9VJJidVV4",
+    "expires_in": 900
+}
+
+Task 4 - Protected Route 
+GET /protected 
+
+Output:
+{
+    "message": "Access granted",
+    "user": {
+        "email": "kritikagarg351@gmail.com",
+        "sessionId": "avjo8b",
+        "iat": 1773221870,
+        "exp": 1773222770
+    },
+    "success_flag": "FLAG-a3JpdGlrYWdhcmczNTFAZ21haWwuY29tX0NPTVBMRVRFRF9BU1NJR05NRU5U"
+}
